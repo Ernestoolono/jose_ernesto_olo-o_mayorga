@@ -1,0 +1,33 @@
+import math
+
+def calcular_area_circulo(radio):
+    return math.pi * radio**2
+
+def calcular_area_rectangulo(base, altura):
+    return base * altura
+
+def calcular_area_triangulo(base, altura):
+    return (base * altura) / 2
+
+def main():
+    figura = input("¿Qué figura quieres calcular (círculo, rectángulo o triángulo)? ").lower()
+    
+    if figura == "circulo":
+        radio = float(input("Introduce el radio del círculo: "))
+        area = calcular_area_circulo(radio)
+        print(f"El área del círculo es: {area}")
+    elif figura == "rectangulo":
+        base = float(input("Introduce la longitud de la base del rectángulo: "))
+        altura = float(input("Introduce la altura del rectángulo: "))
+        area = calcular_area_rectangulo(base, altura)
+        print(f"El área del rectángulo es: {area}")
+    elif figura == "triangulo":
+        base = float(input("Introduce la longitud de la base del triángulo: "))
+        altura = float(input("Introduce la altura del triángulo: "))
+        area = calcular_area_triangulo(base, altura)
+        print(f"El área del triángulo es: {area}")
+    else:
+        print("Figura no reconocida. Por favor, elige entre círculo, rectángulo o triángulo.")
+
+if __name__ == "__main__":
+    main()
